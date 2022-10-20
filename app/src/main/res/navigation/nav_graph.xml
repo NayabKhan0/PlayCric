@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/teamsFragment">
+
+    <fragment
+        android:id="@+id/teamsFragment"
+        android:name="com.example.playcric.Fragment.TeamsFragment"
+        android:label="fragment_teams"
+        tools:layout="@layout/fragment_teams" >
+        <action
+            android:id="@+id/action_teamsFragment_to_groupTeamsFragment"
+            app:destination="@id/groupTeamsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupTeamsFragment"
+        android:name="com.example.playcric.Fragment.GroupTeamsFragment"
+        android:label="fragment_group_teams"
+        tools:layout="@layout/fragment_group_teams" >
+
+        <action
+            android:id="@+id/action_groupTeamsFragment_to_semiFinalTeamsFragment"
+            app:destination="@id/semiFinalTeamsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalGameFragment"
+        android:name="com.example.playcric.Fragment.FinalGameFragment"
+        android:label="fragment_final_game"
+        tools:layout="@layout/fragment_final_game" >
+        <action
+            android:id="@+id/action_finalGameFragment_to_teamsFragment"
+            app:destination="@id/teamsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/semiFinalTeamsFragment"
+        android:name="com.example.playcric.Fragment.SemiFinalTeamsFragment"
+        android:label="fragment_semi_final_teams"
+        tools:layout="@layout/fragment_semi_final_teams" >
+        <action
+            android:id="@+id/action_semiFinalTeamsFragment_to_finalGameFragment"
+            app:destination="@id/finalGameFragment" />
+    </fragment>
+</navigation>

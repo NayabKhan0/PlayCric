@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#010B43">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:fontFamily="@font/font1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="CRICKET TEAMS"
+            android:textColor="@color/color1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/titleTextView"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/stimulate" />
+
+        <Button
+            android:id="@+id/stimulate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/color1"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/font1"
+            android:text="continue" />
+
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/animation"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+</RelativeLayout>
